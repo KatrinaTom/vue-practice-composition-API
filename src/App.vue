@@ -1,6 +1,7 @@
 <template>
   <section class="container">
-    <h2>{{ userName }}</h2>
+    <h2>{{ user.name }}</h2>
+    <h3>{{ user.age }}</h3>
   </section>
 </template>
 
@@ -9,13 +10,20 @@ import { ref } from 'vue';
 
 export default {
   setup() {
-    const uName = ref('Katrina');
+    // const uName = ref('Katrina');
+    // const uAge = ref(37);
+
+    const user = ref({
+      name: 'Katrina',
+      age: 37,
+    });
 
     setTimeout(function() {
-      uName.value = 'Kat'
+      user.value.name = 'Kat';
+      user.value.age = 32;
     }, 2000);
 
-    return { userName: uName };
+    return { userName: user.value.name, age: user.value.age, user: user };
 
   }
   // data() {
