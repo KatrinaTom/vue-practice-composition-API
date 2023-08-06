@@ -40,3 +40,7 @@ https://vuejs.org/api/sfc-script-setup.html
 Options API vs Composition API in Vue.
 
 Define in set up and then expose in the template. 
+
+## Practice Project
+
+<img src="images/project.png" width=500 />
