@@ -2,6 +2,7 @@
   <section class="container">
     <h2>{{ user.name }}</h2>
     <h3>{{ user.age }}</h3>
+    <button @click="setAge">Change Age</button>
   </section>
 </template>
 
@@ -18,12 +19,19 @@ export default {
       age: 37,
     });
 
-    setTimeout(function() {
-      user.value.name = 'Kat';
-      user.value.age = 32;
-    }, 2000);
+    // storing a pointer function in this set object below
+    function setNewAge() {
+      user.age = 38;
+    }
 
-    return { userName: user.value.name, age: user.value.age, user: user };
+    return { user: user, setAge: setNewAge };
+
+    // setTimeout(function() {
+    //   user.name = 'Kat';
+    //   user.age = 32;
+    // }, 2000);
+
+    // return { user: user };
 
   }
   // data() {

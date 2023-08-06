@@ -33,4 +33,10 @@ https://vuejs.org/api/sfc-script-setup.html
 * ref() works with any kind of value
 * reactive only works with objects
 
-<img src="images/reactive.png" width=200 />
+<img src="images/reactive.png" width=500 />
+
+## Managing Reactive Data 
+
+Options API vs Composition API in Vue.
+
+Define in set up and then expose in the template. 
